@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  scope '/:locale' do
+    resources :sessions, only: %i[new create destroy]
+    resources :imports, only: %i[new]
+  end
+  root 'sessions#new'
 end
