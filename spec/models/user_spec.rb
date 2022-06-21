@@ -12,6 +12,8 @@ RSpec.describe User, type: :model do
   it { is_expected.to(validate_length_of(:email).is_at_most(255)) }
   it { is_expected.to(have_db_index(:email)) }
   it { is_expected.to(have_secure_password) }
+  it { is_expected.to(validate_length_of(:password).is_at_most(255)) }
+  it { is_expected.to(validate_length_of(:password).is_at_least(8)) }
 
   context 'when save' do
     let(:email) { Faker::Internet.email }

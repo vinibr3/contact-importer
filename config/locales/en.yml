@@ -4,8 +4,13 @@ en:
     new:
       title: Login
       submit: Login
+      unregistered: Do not have account?
     create:
       unauthenticated: Invalids email or password
+  registrations:
+    new:
+      title: Register
+      submit: Register me
   koombea: Koombea
   helpers:
     submit:
