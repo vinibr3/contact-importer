@@ -77,7 +77,6 @@ RSpec.configure do |config|
 
   config.before(:each) do
     DatabaseCleaner.start
-    FactoryBot.create(:system_parametrization)
   end
 
   config.after(:each) do
@@ -86,7 +85,6 @@ RSpec.configure do |config|
 
   config.before(:all) do
     DatabaseCleaner.start
-    FactoryBot.create(:system_parametrization)
   end
 
   config.after(:all) do
