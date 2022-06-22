@@ -12,7 +12,7 @@ class RegistrationsController < ApplicationController
 
     if @user.save
       sign_in(@user)
-      redirect_to new_import_path
+      redirect_to imports_path
     else
       render :new, status: :unprocessable_entity
     end

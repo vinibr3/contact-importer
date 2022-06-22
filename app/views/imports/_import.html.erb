@@ -1,0 +1,5 @@
+<tr>
+  <td> <%= import.contacts_file.try(:filename) %> </td>
+  <td> <%= import.status %> </td>
+  <td> <%= import.created_at.strftime('%Y %m %d %H:%M') %> </td>
+</tr>

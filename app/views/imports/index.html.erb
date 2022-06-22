@@ -1,0 +1,25 @@
+<div class='row'>
+  <div class='col'>
+    <h2><%= t('.title') %></h2>
+    <%= link_to t('.new_import'), new_import_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <table class="table table-striped">
+      <thead>
+        <th> <%= t('attributes.contacts_file') %> </th>
+        <th> <%= t('attributes.status') %> </th>
+        <th> <%= t('attributes.created_at') %> </th>
+      <thead>
+      <tbody>
+        <%= render @imports %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <%= paginate @imports %>
+  </div>
+</div>
