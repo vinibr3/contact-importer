@@ -1,0 +1,9 @@
+<tr>
+  <td> <%= contact.name %> </td>
+  <td> <%= contact.date_of_birth.try(:strftime, '%Y %B %e') %> </td>
+  <td> <%= contact.telephone %> </td>
+  <td> <%= contact.address %> </td>
+  <td> <%= contact.last_credit_card_numbers %> </td>
+  <td> <%= contact.email %> </td>
+  <td> <%= contact.created_at.try(:strftime, '%Y %m %d %H:%M') %> </td>
+</tr>

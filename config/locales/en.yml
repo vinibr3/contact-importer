@@ -27,9 +27,13 @@ en:
     new:
       title: New Import
       sort_headers: Sorts contacts file columns below
+  contacts:
+    index:
+      title: Contacts
   koombea: Koombea
   helpers:
     submit:
       exit: Logout
     menu:
       imports: Imports
+      contacts: Contacts
