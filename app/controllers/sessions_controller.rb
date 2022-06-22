@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
     if @user
       sign_in(@user)
-      redirect_to new_import_path
+      redirect_to imports_path
     else
       redirect_to new_session_path, alert: t('.unauthenticated')
     end

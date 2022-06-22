@@ -11,7 +11,13 @@ en:
     new:
       title: Register
       submit: Register me
+  imports:
+    index:
+      title: Imports
+      new_import: New Import
   koombea: Koombea
   helpers:
     submit:
       exit: Logout
+    menu:
+      imports: Imports
