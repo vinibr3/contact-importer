@@ -4,6 +4,7 @@ class Import < ApplicationRecord
   belongs_to :user
 
   has_many :contacts
+  has_many :error_logs
 
   enum status: { on_hold: 0, processing: 1, failed: 2, terminated: 3 }
 
