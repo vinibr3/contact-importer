@@ -22,7 +22,7 @@ RSpec.describe RegistrationsController, type: :controller do
 
       before { post :create, params: params }
 
-      it { is_expected.to(redirect_to(new_import_path)) }
+      it { is_expected.to(redirect_to(imports_path)) }
       it { is_expected.to(respond_with(:found)) }
       it do
         is_expected.to(permit(:email, :password, :password_confirmation)
