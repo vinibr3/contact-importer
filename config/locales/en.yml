@@ -1,5 +1,13 @@
 en:
   hello: Hello world
+  attributes:
+    name: Name
+    date_of_birth: Date of Birth
+    telephone: Telephone
+    credit_card: Credit Card
+    address: Address
+    franchise: Franchise
+    email: Email
   sessions:
     new:
       title: Login
@@ -15,6 +23,9 @@ en:
     index:
       title: Imports
       new_import: New Import
+    new:
+      title: New Import
+      sort_headers: Sorts contacts file columns below
   koombea: Koombea
   helpers:
     submit:
