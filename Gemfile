@@ -15,6 +15,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
 gem 'bootsnap', require: false
 gem 'sidekiq', '~> 6.5', '>= 6.5.1'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
