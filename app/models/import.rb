@@ -1,4 +1,6 @@
 class Import < ApplicationRecord
+  HEADERS = %i[name birth_of_date telephone address credit_card franchise email]
+
   belongs_to :user
 
   has_many :contacts
@@ -7,8 +9,14 @@ class Import < ApplicationRecord
 
   has_one_attached :contacts_file
 
+  serialize :headers, Array
+
   validate :contacts_file_attached
   validate :contacts_file_as_csv
+
+  def headers=(value)
+    self[:headers] = value.to_s.split(',')
+  end
 
   private
 
