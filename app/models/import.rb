@@ -1,5 +1,5 @@
 class Import < ApplicationRecord
-  HEADERS = %i[name birth_of_date telephone address credit_card franchise email]
+  HEADERS = %i[name date_of_birth_iso8601 telephone address credit_card email]
 
   belongs_to :user
 

@@ -16,6 +16,7 @@ class ImportsController < ApplicationController
     @import = Import.new(valid_params)
 
     if @import.save
+      Imports::ProcessorJob.perform_later(@import)
       redirect_to imports_path
     else
       render :new, status: :unprocessable_entity
@@ -26,7 +27,7 @@ class ImportsController < ApplicationController
 
   def valid_params
     params.require(:import)
-          .permit(:headers, :contacts_file_has_header, :contacts_file)
+          .permit(:headers, :contacts_file)
           .merge(user: current_user)
   end
 end
