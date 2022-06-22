@@ -3,7 +3,7 @@
     <h2><%= t('.title') %></h2>
     <%= form_with model: @import, local: true do |f| %>
       <%= f.hidden_field :headers, value: Import::HEADERS.join(',') %>
-      <div>
+      <div class="mb-3">
         <p> <%= t('.sort_headers') %></p>
         <ul id="sortable-headers" class="list-group">
           <% Import::HEADERS.each do |header| %>
@@ -12,13 +12,6 @@
             </li>
           <% end %>
         </ul>
-      </div>
-      <div>
-        <%= f.label :contacts_file_has_header, class: 'form-label', hint: 'first line' %>
-        <%= f.check_box :contacts_file_has_header %>
-        <div class="small text-danger">
-          <%= f.object.errors[:email].join(', ') %>
-        </div>
       </div>
       <div class="mb-3">
         <%= f.file_field :contacts_file, class: 'form-control', required: true, accept: '.csv', multiple: false %>

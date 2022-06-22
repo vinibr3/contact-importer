@@ -3,6 +3,7 @@ en:
   attributes:
     name: Name
     date_of_birth: Date of Birth
+    date_of_birth_iso8601: Date of Birth
     telephone: Telephone
     credit_card: Credit Card
     address: Address
