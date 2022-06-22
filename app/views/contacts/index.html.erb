@@ -1,0 +1,28 @@
+<div class='row'>
+  <div class='col'>
+    <h2><%= t('.title') %></h2>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <table class="table table-striped">
+      <thead>
+        <th> <%= t('attributes.name') %> </th>
+        <th> <%= t('attributes.date_of_birth') %> </th>
+        <th> <%= t('attributes.telephone') %> </th>
+        <th> <%= t('attributes.address') %> </th>
+        <th> <%= t('attributes.credit_card') %> </th>
+        <th> <%= t('attributes.email') %> </th>
+        <th> <%= t('attributes.created_at') %> </th>
+      <thead>
+      <tbody>
+        <%= render @contacts %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
+    <%= paginate @contacts %>
+  </div>
+</div>
