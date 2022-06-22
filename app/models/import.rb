@@ -1,6 +1,8 @@
 class Import < ApplicationRecord
   belongs_to :user
 
+  has_many :contacts
+
   enum status: { on_hold: 0, processing: 1, failed: 2, terminated: 3 }
 
   has_one_attached :contacts_file
