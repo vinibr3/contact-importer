@@ -36,6 +36,7 @@ en:
   error_logs:
     index:
       title: Error Logs
+      headers: Contacts file columns 
   helpers:
     submit:
       exit: Logout

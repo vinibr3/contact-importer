@@ -5,6 +5,11 @@
 </div>
 <div class='row'>
   <div class='col'>
+    <p><%= t('.headers') %>:&nbsp;<%= @import.headers.map{|h| t("attributes.#{h}") }.join(', ') %></p>
+  </div>
+</div>
+<div class='row'>
+  <div class='col'>
     <table class="table table-striped">
       <thead>
         <th> <%= t('attributes.row') %> </th>
