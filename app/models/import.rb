@@ -12,6 +12,8 @@ class Import < ApplicationRecord
 
   serialize :headers, Array
 
+  validates :headers, presence: true
+
   validate :contacts_file_attached
   validate :contacts_file_as_csv
 

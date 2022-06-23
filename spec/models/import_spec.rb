@@ -12,6 +12,7 @@ RSpec.describe Import, type: :model do
   it { is_expected.to(define_enum_for(:status).with_values(%i[on_hold processing failed terminated])) }
   it { is_expected.to(serialize(:headers)) }
   it { is_expected.to(have_many(:error_logs)) }
+  it { is_expected.to(validate_presence_of(:headers)) }
 
   context 'when validate' do
     describe 'with file attached' do
