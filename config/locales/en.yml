@@ -9,6 +9,8 @@ en:
     address: Address
     franchise: Franchise
     email: Email
+    row: Contacts File Row
+    message: Message
   sessions:
     new:
       title: Login
@@ -31,6 +33,9 @@ en:
     index:
       title: Contacts
   koombea: Koombea
+  error_logs:
+    index:
+      title: Error Logs
   helpers:
     submit:
       exit: Logout

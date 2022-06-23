@@ -1,0 +1,5 @@
+<tr>
+  <td> <%= error_log.row %> </td>
+  <td> <%= error_log.message %> </td>
+  <td> <%= error_log.created_at.try(:strftime, '%Y %m %d %H:%M') %> </td>
+</tr>

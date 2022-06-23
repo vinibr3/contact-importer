@@ -16,6 +16,7 @@ RSpec.describe User, type: :model do
   it { is_expected.to(validate_length_of(:password).is_at_least(8)) }
   it { is_expected.to(have_many(:imports)) }
   it { is_expected.to(have_many(:contacts).through(:imports)) }
+  it { is_expected.to(have_many(:error_logs).through(:imports))}
 
   context 'when save' do
     let(:email) { Faker::Internet.email }
