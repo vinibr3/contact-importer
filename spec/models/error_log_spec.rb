@@ -11,4 +11,5 @@ RSpec.describe ErrorLog, type: :model do
   it { is_expected.to(validate_presence_of(:message)) }
   it { is_expected.to(validate_numericality_of(:row).only_integer) }
   it { is_expected.to(belong_to(:import)) }
+  it { is_expected.to(have_one(:user).through(:import)) }
 end
